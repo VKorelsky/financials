@@ -4,7 +4,6 @@ class CreateAccounts < ActiveRecord::Migration[5.0]
       t.integer :amount
       t.references :debtor
       t.references :creditor
-      t.references :room
 
       t.timestamps
     end

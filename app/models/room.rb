@@ -1,6 +1,6 @@
 class Room < ApplicationRecord
-    has_many :accounts, dependent: :destroy
-    has_many :users, through: :accounts, dependent: :destroy
+    has_many :accounts, through: :users
+    has_many :users, dependent: :destroy
     has_secure_password
 
     validates_presence_of :password, on: :create
