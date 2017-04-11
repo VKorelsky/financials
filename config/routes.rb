@@ -1,18 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'room/all'
+  resources :rooms
 
-  get 'room/login'
+  get 'login/:id', to: 'room#login'
+  post 'rooms/authenticate/:id', to: 'rooms#authenticate'
 
-  get 'room/show'
-
-  get 'room/new'
-  post 'room/create'
-
-  get 'room/edit'
-  post 'room/update'
-
-  get 'room/destroy'
-
-
+  # root to specific room for early phase
+  root to: 'room#login', id: 1
 end

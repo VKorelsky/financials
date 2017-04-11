@@ -1,8 +1,15 @@
 class RoomController < ApplicationController
   def all
+    @rooms = Room.all
   end
 
   def login
+    @req_room = Room.find(params[:id])
+    raise
+  end
+
+  def authenticate
+
   end
 
   def show
