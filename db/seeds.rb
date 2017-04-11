@@ -8,6 +8,8 @@
 
 # Test model 1, John owes 14 to Fred, Fred owes 7 to John --> John owes 7 to Fred.
 
+Room.create(name: 'Test Room')
+
 j = User.create(name: 'John')
 f = User.create(name: 'Fred')
 

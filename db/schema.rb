@@ -19,10 +19,12 @@ ActiveRecord::Schema.define(version: 20170411141344) do
     t.integer  "amount"
     t.integer  "debtor_id"
     t.integer  "creditor_id"
+    t.integer  "room_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["creditor_id"], name: "index_accounts_on_creditor_id", using: :btree
     t.index ["debtor_id"], name: "index_accounts_on_debtor_id", using: :btree
+    t.index ["room_id"], name: "index_accounts_on_room_id", using: :btree
   end
 
   create_table "rooms", force: :cascade do |t|
