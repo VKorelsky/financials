@@ -10,18 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170411030054) do
+ActiveRecord::Schema.define(version: 20170411024540) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "accounts", force: :cascade do |t|
-    t.string   "name"
+    t.integer  "amount"
     t.integer  "debtor_id"
     t.integer  "creditor_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "amount"
     t.index ["creditor_id"], name: "index_accounts_on_creditor_id", using: :btree
     t.index ["debtor_id"], name: "index_accounts_on_debtor_id", using: :btree
   end

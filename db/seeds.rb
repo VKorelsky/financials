@@ -8,5 +8,8 @@
 
 # Test model 1, John owes 14 to Fred, Fred owes 7 to John --> John owes 7 to Fred.
 
-User.create(name: 'John')
-User.create(name: 'Fred')
+j = User.create(name: 'John')
+f = User.create(name: 'Fred')
+
+Account.create(debtor: j, creditor: f, amount: 14)
+Account.create(debtor: f, creditor: j, amount: 7)
