@@ -1,5 +1,4 @@
 class Room < ApplicationRecord
-    has_many :accounts, through: :users
     has_many :users, dependent: :destroy
     has_secure_password
 
