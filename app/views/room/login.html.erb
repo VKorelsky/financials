@@ -1,2 +1,6 @@
-<h1>Room#login</h1>
-<p>Find me in app/views/room/login.html.erb</p>
+<h1><%= @req_room.name %></h1>
+
+<%= simple_form_for @req_room, url: authenticate_path, method: :post do |f| %>
+  <%= f.input :password %>
+  <%= f.button :submit  %>
+<% end %>
