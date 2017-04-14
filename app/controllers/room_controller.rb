@@ -19,7 +19,8 @@ class RoomController < ApplicationController
   end
 
   def show
-    raise
+    @room = Room.find(params[:id])
+    @users = @room.users
   end
 
   def new
@@ -35,5 +36,11 @@ class RoomController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def room_params
+    params.require(:room).permit(:name, :password)
   end
 end

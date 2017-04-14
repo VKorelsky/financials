@@ -1,2 +1,7 @@
-<h1>Room#show</h1>
-<p>Find me in app/views/room/show.html.erb</p>
+<h1><%= @room.name %></h1>
+
+<ul>
+  <% @users.each do |u| %>
+    <li><%= u.name %></li>
+  <% end %>
+</ul>
