@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
 
   resources :room
+  # index
+  # show
+  # new
+  # create
+  # edit
+  # update
+  # destroy
 
   get 'login/:id', to: 'room#login', as: 'login'
   post 'rooms/authenticate/:id', to: 'room#authenticate', as: 'authenticate'
